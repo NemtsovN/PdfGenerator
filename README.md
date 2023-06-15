@@ -12,7 +12,7 @@ Repository for a source code and documentation of PDF documents generation inves
 ## Tools to investigate
 
 - .NET
-  - [x] [SelectPDF](https://selectpdf.com/) []
+  - [x] [SelectPDF](https://selectpdf.com/)
   - [x] [PdfSharp](https://github.com/empira/PDFsharp)
   - [x] [IronPdf](https://ironpdf.com/)
   - [x] [DinkToPdf](https://github.com/rdvojmoc/DinkToPdf)
