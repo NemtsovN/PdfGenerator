@@ -16,12 +16,12 @@ IronPDF takes care of the difficult problem of adding PDF generation to your app
 - Produce invoices, quotes, reports, contracts, and other documents.
 - Work with ASP.NET, ASP.NET Core, web forms, MVC, Web APIs on .NET Framework, and .NET Core.
 
-> License: paid version - please see the [documentation](https://ironpdf.com/licensing-embedded/)
+> License: paid version - please see the [documentation](https://itextpdf.com/how-buy)
 
 ### References
 
-- [Website](https://ironpdf.com/)
-- [Sample code](https://ironpdf.com/examples/using-html-to-create-a-pdf/)
+- [Website](https://itextpdf.com/)
+- [Sample code](https://github.com/itext/itext7-dotnet)
 
 ## Notes
 

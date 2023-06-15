@@ -4,8 +4,6 @@
   - [General](#general)
   - [Tools to investigate](#tools-to-investigate)
   - [Comparison Table](#comparison-table)
-    - [.NET](#net)
-    - [Node.js](#nodejs)
 
 ## General
 
@@ -27,8 +25,6 @@ Repository for a source code and documentation of PDF documents generation inves
 
 ## Comparison Table
 
-### .NET
-
 > Please note: table does not contain tools that were rejected during investigation.
 
 | Feature                              | SelectPDF                                                                                                                           | IronPDF                                                                                                         | iTextSharp                                                                                                |
@@ -42,7 +38,3 @@ Repository for a source code and documentation of PDF documents generation inves
 | Community activity                   | 237 search results on StackOverflow                                                                                                 | 211 search results on StackOverflow                                                                             | 1.3k starts on a GitHub. 500 search results on  StackOverflow                                             |
 | Update frequency                     | Development is active, new version approximately every 3 month. The latest version has been published on 08/062023.                 | Active development. New version approximately every month. The latest version has been published on 02/06/2023. | Partially active development. New version approximately every 3-5 month. The latest release on 10/05/2023 |
 | Number of downloads                  | 2.7 million.                                                                                                                        | 6.2 million.                                                                                                    | 4.2 million.                                                                                              |
-
-### Node.js
-
-> Please note: table does not contain tools that were rejected during investigation.
