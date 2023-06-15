@@ -18,6 +18,7 @@ Repository for a source code and documentation of PDF documents generation inves
   - [x] [DinkToPdf](https://github.com/rdvojmoc/DinkToPdf)
   - [x] [iTextSharp](https://github.com/itext/itextsharp)
   - [x] [wkhtmltopdf](https://wkhtmltopdf.org/)
+  - [x] [PDFSharpCore](https://github.com/ststeiger/PdfSharpCore)
 - Node.js
   - [x] [html-pdf](https://github.com/marcbachmann/node-html-pdf)
   - [x] [Puppeteer](https://github.com/puppeteer/puppeteer)
