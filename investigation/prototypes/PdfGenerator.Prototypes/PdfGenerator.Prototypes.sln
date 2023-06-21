@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuppeteerSharpGenerator", "src\PuppeteerSharpGenerator\PuppeteerSharpGenerator.csproj", "{E83A7C39-09F5-4854-9A05-DD8B369A1F4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generators", "generators", "{9652AC36-F88D-481E-91A5-86BA73DC1201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "src\Utils\Utils.csproj", "{EECEF058-64DC-4108-B224-05BEB25F0523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Development", "src\Development\Development.csproj", "{C82CA35C-034C-4147-9101-D3310CA6C552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarks", "benchmarks\Benchmarks\Benchmarks.csproj", "{63820A2C-01C2-45DA-AD18-0E98267EF39A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRecoGenerator", "src\NRecoGenerator\NRecoGenerator.csproj", "{771D3B6D-94CE-49A4-81DB-031D402E9374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItextGenerator", "src\ItextGenerator\ItextGenerator.csproj", "{1F5345D4-C97C-4518-9684-3932F2598640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WkhtmltopdfGenerator", "src\WkhtmltopdfGenerator\WkhtmltopdfGenerator.csproj", "{18F15E82-4643-48A8-8A4A-957F94BA1C90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E83A7C39-09F5-4854-9A05-DD8B369A1F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83A7C39-09F5-4854-9A05-DD8B369A1F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83A7C39-09F5-4854-9A05-DD8B369A1F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83A7C39-09F5-4854-9A05-DD8B369A1F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EECEF058-64DC-4108-B224-05BEB25F0523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECEF058-64DC-4108-B224-05BEB25F0523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECEF058-64DC-4108-B224-05BEB25F0523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECEF058-64DC-4108-B224-05BEB25F0523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82CA35C-034C-4147-9101-D3310CA6C552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82CA35C-034C-4147-9101-D3310CA6C552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82CA35C-034C-4147-9101-D3310CA6C552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82CA35C-034C-4147-9101-D3310CA6C552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63820A2C-01C2-45DA-AD18-0E98267EF39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63820A2C-01C2-45DA-AD18-0E98267EF39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63820A2C-01C2-45DA-AD18-0E98267EF39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63820A2C-01C2-45DA-AD18-0E98267EF39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771D3B6D-94CE-49A4-81DB-031D402E9374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771D3B6D-94CE-49A4-81DB-031D402E9374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771D3B6D-94CE-49A4-81DB-031D402E9374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771D3B6D-94CE-49A4-81DB-031D402E9374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5345D4-C97C-4518-9684-3932F2598640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5345D4-C97C-4518-9684-3932F2598640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5345D4-C97C-4518-9684-3932F2598640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5345D4-C97C-4518-9684-3932F2598640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F15E82-4643-48A8-8A4A-957F94BA1C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F15E82-4643-48A8-8A4A-957F94BA1C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F15E82-4643-48A8-8A4A-957F94BA1C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F15E82-4643-48A8-8A4A-957F94BA1C90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E83A7C39-09F5-4854-9A05-DD8B369A1F4E} = {9652AC36-F88D-481E-91A5-86BA73DC1201}
+		{771D3B6D-94CE-49A4-81DB-031D402E9374} = {9652AC36-F88D-481E-91A5-86BA73DC1201}
+		{1F5345D4-C97C-4518-9684-3932F2598640} = {9652AC36-F88D-481E-91A5-86BA73DC1201}
+		{18F15E82-4643-48A8-8A4A-957F94BA1C90} = {9652AC36-F88D-481E-91A5-86BA73DC1201}
+	EndGlobalSection
+EndGlobal
