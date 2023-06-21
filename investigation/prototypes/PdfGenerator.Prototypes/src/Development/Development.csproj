@@ -9,21 +9,24 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <EmbeddedResource Include="..\..\..\..\stubs\html-to-convert\index.html">
-        <Link>Stubs\index.html</Link>
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </EmbeddedResource>
-      <EmbeddedResource Include="..\..\..\..\stubs\html-to-convert\styles.css">
-        <Link>Stubs\styles.css</Link>
+      <ProjectReference Include="..\ItextGenerator\ItextGenerator.csproj" />
+      <ProjectReference Include="..\NRecoGenerator\NRecoGenerator.csproj" />
+      <ProjectReference Include="..\PuppeteerSharpGenerator\PuppeteerSharpGenerator.csproj" />
+      <ProjectReference Include="..\Utils\Utils.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="..\..\..\..\..\stubs\html-to-convert\index.html">
+        <Link>Stubs/index.html</Link>
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ItextGenerator\ItextGenerator.csproj" />
-      <ProjectReference Include="..\NRecoGenerator\NRecoGenerator.csproj" />
-      <ProjectReference Include="..\PuppeteerSharpGenerator\PuppeteerSharpGenerator.csproj" />
-      <ProjectReference Include="..\Utils\Utils.csproj" />
+      <EmbeddedResource Include="..\..\..\..\..\stubs\html-to-convert\styles.css">
+        <Link>Stubs/styles.css</Link>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>

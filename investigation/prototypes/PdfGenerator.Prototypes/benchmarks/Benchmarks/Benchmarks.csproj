@@ -18,20 +18,15 @@
       <ProjectReference Include="..\..\src\PuppeteerSharpGenerator\PuppeteerSharpGenerator.csproj" />
       <ProjectReference Include="..\..\src\Utils\Utils.csproj" />
       <ProjectReference Include="..\..\src\WkhtmltopdfGenerator\WkhtmltopdfGenerator.csproj" />
-      <ProjectReference Include="..\ItextGenerator\ItextGenerator.csproj" />
-      <ProjectReference Include="..\NRecoGenerator\NRecoGenerator.csproj" />
-      <ProjectReference Include="..\PuppeteerSharpGenerator\PuppeteerSharpGenerator.csproj" />
-      <ProjectReference Include="..\Utils\Utils.csproj" />
-      <ProjectReference Include="..\WkhtmltopdfGenerator\WkhtmltopdfGenerator.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Include="..\..\..\..\stubs\html-to-convert\styles.css">
-        <Link>Stubs/styles.css</Link>
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </EmbeddedResource>
       <None Remove="Stubs\index.html" />
       <EmbeddedResource Include="Stubs\index.html">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Stubs\styles.css" />
+      <EmbeddedResource Include="Stubs\styles.css">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
