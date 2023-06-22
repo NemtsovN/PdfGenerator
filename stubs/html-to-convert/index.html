@@ -3,12 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Best Series in the World</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <h1>Best Series in the World</h1>
-        
         <table>
             <tr>
                 <th>Series</th>
@@ -108,9 +107,6 @@
             </tr>
         </table>
         
-        
-        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Best Series Image">
-        
         <ul>
             <li>Must-Watch Series:
                 <ul>
@@ -142,9 +138,46 @@
                 alert('Yes, it works!');
             }
         </script>
+
+        <div style="text-align: center;">
+            <h3>
+                The winner is:
+            </h3>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="600" height="100" viewBox="0 0 600 100">
+                <!-- Background -->
+                <rect x="0" y="0" width="600" height="100" fill="#1A1A1A" />
+    
+                <!-- Text -->
+                <text x="50" y="70" fill="#D8D8D8" font-family="Arial" font-size="60" font-weight="bold">
+                Game of Thrones
+                </text>
+            </svg>
+        </div>
+
+        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Best Series Image">
+
+        <div id="container">
+        </div>
         
         <footer>
             &copy; 2023 Best Series in the World. All rights reserved.
         </footer>
+
+        <script>
+            window.addEventListener('load', function() {
+                // Create a new <h4> element
+                var heading = document.createElement('h4');
+                
+                // Set the text content of the <h4> element
+                heading.textContent = 'This is a dynamically added string';
+                
+                // Find the element where you want to append the <h4> element
+                var container = document.getElementById('container');
+                
+                // Append the <h4> element to the container element
+                container.appendChild(heading);
+                });
+        </script>
     </body>
 </html>

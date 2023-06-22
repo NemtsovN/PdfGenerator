@@ -5,6 +5,7 @@
     - [References](#references)
   - [Notes](#notes)
     - [Concerns](#concerns)
+      - [Documentation](#documentation)
   - [Outcome](#outcome)
 
 ## General
@@ -37,6 +38,14 @@ IronPDF takes care of the difficult problem of adding PDF generation to your app
 - Not an open-source.
 - License cost.
 - Not a great community: 211 results on stackoverflow.
+
+#### Documentation
+
+During prototyping of a solution with a help of iText, we have faced an issue that exporting of PDF to a MemoryStream resulted in disposed object. To overcome this issue, we tried to visit GitHub of this project but besides small documentation it contained no information. Also GitHub issues were unavailable despite the code is open-source.
+
+There is [Knowledge Base](https://kb.itextpdf.com/home) forum, that is should support developers in a form of questions-answers. Despite this is a common practice, answering is only available to iText workers, so the amount of information there is very limited.
+
+As a result, we were not able to find a resolution of this issue with a help of documentation. This highlights a problem of "managed" approach - limited documentation and support available.
 
 ## Outcome
 
