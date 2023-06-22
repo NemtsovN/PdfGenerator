@@ -8,7 +8,7 @@ public static class PdfGenerator
         var htmlGenerator = new NReco.PdfGenerator.HtmlToPdfConverter();
         
         htmlGenerator.License.SetLicenseKey(
-            "DEMO", "pjfsL9eBhU5mER7ULRNO/pgqeXBsJF15ea8d+vpzJ/ja8LpELgrs2FoaZwNLRmsJpgwKahfzSvyCZDHZsI0Bs9KCaby6CXo02YxpA3iiwJPaDdfO+vTK/JCsjH/d9l6118KUVjegNFAraGSKA3Q6tMTg4/injiZ9wZ3kcjoXPjs=");
+            "DEMO", "YOUR DEMO KEY");
         htmlGenerator.Quiet = false;
 
         htmlGenerator.GeneratePdf(htmlInput, string.Empty, resultPdf);
