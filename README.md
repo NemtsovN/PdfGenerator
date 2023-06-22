@@ -80,13 +80,13 @@ For each of these tools, we have created a [prototype](/investigation/prototypes
 
 Besides just benchmarking of solutions, we have compared them by functionality:
 
-| Feature                                                    | PuppeteerSharp      | iText                                                             | Wkhtmltopdf wrapper                                               | NReco              |
-|------------------------------------------------------------|---------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|--------------------|
-| Custom fonts                                               | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark: |
-| Image as URL                                               | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark: |
-| Image as SVG                                               | :white_check_mark:  | :white_circle: Image has been rendered but with a missing margin. | :white_circle: Image has been rendered but with a missing margin. | :white_check_mark: |
-| Tables                                                     | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark: |
-| Lists                                                      | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark: |
-| CSS                                                        | :white_check_mark:  | :white_circle: Image has been rendered but with a missing margin. | :white_circle: Image has been rendered but with a missing margin. | :white_check_mark: |
-| HTML elements generated with a help of Javascript on load. | :white_check_mark:  | :x:                                                               | :x:                                                               | :x:                |
+| Feature                                                    | PuppeteerSharp      | iText                                                             | Wkhtmltopdf wrapper                                               | NReco               |
+|------------------------------------------------------------|---------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|---------------------|
+| Custom fonts                                               | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark:  |
+| Image as URL                                               | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark:  |
+| Image as SVG                                               | :white_check_mark:  | :white_circle: Image has been rendered but with a missing margin. | :white_circle: Image has been rendered but with a missing margin. | :white_check_mark:  |
+| Tables                                                     | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark:  |
+| Lists                                                      | :white_check_mark:  | :white_check_mark:                                                | :white_check_mark:                                                | :white_check_mark:  |
+| CSS                                                        | :white_check_mark:  | :white_circle: Image has been rendered but with a missing margin. | :white_circle: Image has been rendered but with a missing margin. | :white_check_mark:  |
+| HTML elements generated with a help of Javascript on load. | :white_check_mark:  | :x:                                                               | :x:                                                               | :white_check_mark:  |
 
