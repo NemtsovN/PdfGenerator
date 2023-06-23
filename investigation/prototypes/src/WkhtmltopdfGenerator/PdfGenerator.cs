@@ -9,6 +9,7 @@ public class PdfGenerator
         var wkhtmltopdfPath = "/usr/local/bin/wkhtmltopdf";
 
         var process = new Process();
+        
         process.StartInfo.FileName = wkhtmltopdfPath;
         process.StartInfo.Arguments = "- -";
         process.StartInfo.UseShellExecute = false;
@@ -20,9 +21,11 @@ public class PdfGenerator
         var inputWriter = process.StandardInput;
         inputWriter.AutoFlush = true;
         await inputWriter.WriteAsync(htmlInput);
+
         inputWriter.Close();
 
         var outputStream = new MemoryStream();
+
         await process.StandardOutput.BaseStream.CopyToAsync(outputStream);
 
         await process.WaitForExitAsync();

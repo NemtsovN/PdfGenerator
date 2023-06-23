@@ -11,7 +11,8 @@ public static class PdfGenerator
 
         var browserLaunchOptions = new LaunchOptions
         {
-            Headless = true
+            Headless = true,
+            Args = new[] { "--no-sandbox" }
         };
 
         await using var browser = await Puppeteer.LaunchAsync(browserLaunchOptions);
@@ -19,6 +20,7 @@ public static class PdfGenerator
 
         // Inject HTML
         await page.SetContentAsync(htmlInput);
+
         await page.SetCacheEnabledAsync(false);
 
         // Generate PDF file from provided Puppeteer page

@@ -37,6 +37,7 @@ public class PdfGeneratorsBenchmarks
         var _ = await WkhtmltopdfGenerator.
             PdfGenerator
             .GeneratePdfAsync(_inputHtml);
+        Thread.Sleep(5000);
     }
     
     [Benchmark(Description = "Generate PDF file with a help of NReco.")]

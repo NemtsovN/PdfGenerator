@@ -2,14 +2,7 @@ namespace PdfGenerator.Prototypes.Utils;
 
 public static class StreamExtensions
 {
-    public static async Task<string> ConvertToStringAsync(this Stream stream)
-    {
-        var reader = new StreamReader(stream);
-        var result = await reader.ReadToEndAsync();
-        return result;
-    }
-
-    public static async Task SaveToFile(this Stream stream, string fileName, string filePath)
+    public static async Task SaveToFileAsync(this Stream stream, string fileName, string filePath)
     {
         var info = new DirectoryInfo(filePath);  
         
