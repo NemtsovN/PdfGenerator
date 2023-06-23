@@ -8,10 +8,10 @@ var htmlInput = StubFileReader.ReadStubsAsString();
 
 Console.WriteLine("Finished preparation of HTML and CSS.");
 
-// await PuppeteerSharpGeneratePdfAsync(htmlInput);
-// await iTextGeneratePdfAsync(htmlInput);
-// await WkhtmltopdfGeneratePdfAsync(htmlInput);
-// await NRecoGeneratePdfAsync(htmlInput);
+await PuppeteerSharpGeneratePdfAsync(htmlInput);
+await iTextGeneratePdfAsync(htmlInput);
+await WkhtmltopdfGeneratePdfAsync(htmlInput);
+await NRecoGeneratePdfAsync(htmlInput);
 
 static async Task PuppeteerSharpGeneratePdfAsync(string htmlInput)
 {
@@ -68,13 +68,13 @@ static async Task WkhtmltopdfGeneratePdfAsync(string htmlInput)
 
     Console.WriteLine("Finished PDF generation with Wkhtmltopdf.");
 
-    const string WkhtmltopdfResultPdfFileName = "Wkhtmltopdf-result.pdf";
-    Console.WriteLine($"Start saving generated PDF to file '{WkhtmltopdfResultPdfFileName}'");
+    const string wkhtmltopdfResultPdfFileName = "Wkhtmltopdf-result.pdf";
+    Console.WriteLine($"Start saving generated PDF to file '{wkhtmltopdfResultPdfFileName}'");
 
-    await generatedPdfContent.SaveToFileAsync(WkhtmltopdfResultPdfFileName, resultsFolderPath);
+    await generatedPdfContent.SaveToFileAsync(wkhtmltopdfResultPdfFileName, resultsFolderPath);
     await generatedPdfContent.DisposeAsync();
 
-    Console.WriteLine($"Successfully saved PDF to a file '{WkhtmltopdfResultPdfFileName}'");
+    Console.WriteLine($"Successfully saved PDF to a file '{wkhtmltopdfResultPdfFileName}'");
 }
 
 static async Task NRecoGeneratePdfAsync(string htmlInput)

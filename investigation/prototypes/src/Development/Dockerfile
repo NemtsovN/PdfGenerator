@@ -24,32 +24,35 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
 
-# Install wkhtmltopdf
-RUN apt-get update && apt-get install -y wget
+# Install wget
+RUN apt-get update \
+  && apt-get install -y wget
 
-RUN apt-get --assume-yes install fontconfig
-RUN apt-get --assume-yes install xfonts-75dpi
-RUN apt-get --assume-yes install xfonts-100dpi
-RUN apt-get --assume-yes install xfonts-scalable
-RUN apt-get --assume-yes install xfonts-base
+# Install wkhtmltopdf dependencies
+RUN apt-get -y install fontconfig \
+  xfonts-75dpi \
+  xfonts-100dpi \
+  xfonts-scalable \
+  xfonts-base \
+  libjpeg62-turbo \
+  libx11-6 \
+  libxcb1 \
+  libxext6 \
+  libxrender1
 
-RUN apt-get --assume-yes install libjpeg62-turbo
-RUN apt-get --assume-yes install libx11-6
-RUN apt-get --assume-yes install libxcb1
-RUN apt-get --assume-yes install libxext6
-RUN apt-get --assume-yes install libxrender1
-
+# Install wkhtmltopdf dependencies
 RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.bullseye_arm64.deb \
   && dpkg -i wkhtmltox_0.12.6.1-3.bullseye_arm64.deb \
   && rm wkhtmltox_0.12.6.1-3.bullseye_arm64.deb
     
-#####################
-#PUPPETEER RECIPE 
-#####################
-RUN apt-get update && apt-get install -y chromium --no-install-recommends --allow-downgrades fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf
-######################
-#END PUPPETEER RECIPE
-######################
+# Install Puppeteer
+RUN apt-get update && apt-get install -y chromium --no-install-recommends --allow-downgrades \
+  fonts-ipafont-gothic \
+  fonts-wqy-zenhei \
+  fonts-thai-tlwg \
+  fonts-kacst \
+  fonts-freefont-ttf
+
 ENV PUPPETEER_EXECUTABLE_PATH "/usr/bin/chromium"
 
 ENTRYPOINT ["dotnet", "Development.dll"]
