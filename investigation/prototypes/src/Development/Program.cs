@@ -23,14 +23,13 @@ static async Task PuppeteerSharpGeneratePdfAsync(string htmlInput)
         .PdfGenerator
         .GeneratePdfAsync(htmlInput);
 
-    await generatedPdfContent.DisposeAsync();
     Console.WriteLine("Finished PDF generation with PuppeteerSharp.");
 
     const string puppeteerSharpResultPdfFileName = "puppeteerSharp-result.pdf";
     Console.WriteLine($"Start saving generated PDF to file '{puppeteerSharpResultPdfFileName}'");
 
-    /*await generatedPdfContent.SaveToFileAsync(puppeteerSharpResultPdfFileName, resultsFolderPath);
-    await generatedPdfContent.DisposeAsync();*/
+    await generatedPdfContent.SaveToFileAsync(puppeteerSharpResultPdfFileName, resultsFolderPath);
+    await generatedPdfContent.DisposeAsync();
 
     Console.WriteLine($"Successfully saved PDF to a file '{puppeteerSharpResultPdfFileName}'");
 }

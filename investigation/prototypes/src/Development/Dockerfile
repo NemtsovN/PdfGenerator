@@ -46,12 +46,7 @@ RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/w
   && rm wkhtmltox_0.12.6.1-3.bullseye_arm64.deb
     
 # Install Puppeteer
-RUN apt-get update && apt-get install -y chromium --no-install-recommends --allow-downgrades \
-  fonts-ipafont-gothic \
-  fonts-wqy-zenhei \
-  fonts-thai-tlwg \
-  fonts-kacst \
-  fonts-freefont-ttf
+RUN apt-get update && apt-get install -y chromium --no-install-recommends --allow-downgrades fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf
 
 ENV PUPPETEER_EXECUTABLE_PATH "/usr/bin/chromium"
 
