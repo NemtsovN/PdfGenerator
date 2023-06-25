@@ -15,3 +15,6 @@ def pdf_convert():
     html.write_pdf(
         './Results/output.pdf', stylesheets=[css],
         font_config=font_config)
+
+if __name__ == "__main__":
+    pdf_convert()
