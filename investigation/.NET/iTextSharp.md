@@ -5,6 +5,7 @@
     - [References](#references)
   - [Notes](#notes)
     - [Concerns](#concerns)
+      - [Memory consumption](#memory-consumption)
       - [Documentation](#documentation)
   - [Outcome](#outcome)
 
@@ -38,6 +39,24 @@ IronPDF takes care of the difficult problem of adding PDF generation to your app
 - Not an open-source.
 - License cost.
 - Not a great community: 211 results on stackoverflow.
+- Bad documentation.
+- Unknown memory leak.
+
+#### Memory consumption
+
+During memory efficiency testing, we have noticed that abnormally big amount of memory is consumed to transform simple document with a help of iText. Based on a memory dump, we can identify that the most allocated memory is unmanaged.
+
+![iText memory consumption](../images/iText_memory_consumption.png)
+
+As this library does not require any assets to be preinstalled (like headless browser), we suppose that this is a result of `baked-in` binaries of conversion mechanism. At the same time, it is hard to exactly specify which mechanism is used and which binaries are required as iText uses some custom `engine`.
+
+You can find more about its architecture:
+
+- [Question about browser engine in iText](https://kb.itextpdf.com/home/it7kb/ebooks/itext-7-converting-html-to-pdf-with-pdfhtml/chapter-7-frequently-asked-questions-about-pdfhtml/do-we-need-a-browser-engine-to-render-html+css-to-pdf)
+- [Architecture whitepaper](https://itextpdf.com/resources/media/files/pdfhtml-white-paper)
+- [iText technical presentation](https://itextpdf.com/sites/default/files/2018-12/Introducing%20pdfHTML%20-%20technical%20presentation.pdf)
+
+Due to a nature of custom engine for PDF generation, unavailability of documentation and open-source community, it is hard to define if this behavior is expected or it is a memory leak.
 
 #### Documentation
 
