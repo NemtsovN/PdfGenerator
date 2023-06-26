@@ -8,10 +8,10 @@ var htmlInput = StubFileReader.ReadStubsAsString();
 
 Console.WriteLine("Finished preparation of HTML and CSS.");
 
-// await PuppeteerSharpGeneratePdfAsync(htmlInput);
+await PuppeteerSharpGeneratePdfAsync(htmlInput);
 await iTextGeneratePdfAsync(htmlInput);
-// await WkhtmltopdfGeneratePdfAsync(htmlInput);
-// await NRecoGeneratePdfAsync(htmlInput);
+await WkhtmltopdfGeneratePdfAsync(htmlInput);
+await NRecoGeneratePdfAsync(htmlInput);
 
 static async Task PuppeteerSharpGeneratePdfAsync(string htmlInput)
 {
