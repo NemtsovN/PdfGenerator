@@ -30,11 +30,11 @@ Solution represents a set of prototypes that can be used to transform HTML input
 
 #### NReco configuration
 
-To use an NReco generator prototype, you would need a license key. It can be obtained for a [demo purposes](https://www.nrecosite.com/pdf_generator_net.aspx). Once you get a key, please navigate to [PdfGenerator.cs](/investigation/prototypes/src/NRecoGenerator/PdfGenerator.cs) and replace `YOUR_DEMO_KEY`.
+To use an NReco generator prototype, you would need a license key. It can be obtained for a [demo purposes](https://www.nrecosite.com/pdf_generator_net.aspx). Once you get a key, please navigate to [PdfGenerator.cs](/prototypes/dotNet/src/NRecoGenerator/PdfGenerator.cs) and replace `YOUR_DEMO_KEY`.
 
 #### wkhtmltopdf
 
-Generator prototype for wkhtmltopdf needs binaries that will point to installed version of CLI tool. Once you install it, please adjust `wkhtmltopdfPath` variable in [PdfGenerator.cs](/investigation//prototypes//src//WkhtmltopdfGenerator/PdfGenerator.cs).
+Generator prototype for wkhtmltopdf needs binaries that will point to installed version of CLI tool. Once you install it, please adjust `wkhtmltopdfPath` variable in [PdfGenerator.cs](/prototypes/dotNet/src/WkhtmltopdfGenerator/PdfGenerator.cs).
 
 ### Run
 
