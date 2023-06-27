@@ -38,7 +38,9 @@ public static class PdfGenerator
         {
             Format = PaperFormat.A4,
             DisplayHeaderFooter = true,
-            PrintBackground = true,
+            
+            // Defines if we want to print a background color of a page. For example: if background is grey, it will create a box inside page with grey color.
+            // PrintBackground = true,
             MarginOptions = new()
             {
                 Bottom = "1.5cm",
@@ -49,8 +51,8 @@ public static class PdfGenerator
             // Width = "2480px",
             // Height = "3508px",
             Scale = new decimal(0.99),
-            HeaderTemplate = "<div id=\"footer-template\" style=\"font-size:10px !important; color:#808080;\">Header template text</div>",
-            FooterTemplate = "<div id=\"footer-template\" style=\"font-size:10px !important; color:#808080;\">Footer template text</div>"
+            HeaderTemplate = "<div id=\"footer-template\" style=\"font-size:10px !important; margin-left: 40px; color:#808080;\"><span class=\"date\"></span> <span class=\"title\" style=\"padding-left: 150px;\"></span></div>",
+            FooterTemplate = "<div style=\"width:100%; margin: 0 auto; padding-right: 40px;\"><p style=\"text-align: right; font-size: 10px;\"><span class=\"pageNumber\"></span>/<span class=\"totalPages\"></span></p></div>"
         };
 
         var resultPdf = await page.PdfStreamAsync(pdfOptions);
