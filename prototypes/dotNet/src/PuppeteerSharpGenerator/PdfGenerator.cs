@@ -51,7 +51,9 @@ public static class PdfGenerator
             // Width = "2480px",
             // Height = "3508px",
             Scale = new decimal(0.99),
-            HeaderTemplate = "<div id=\"footer-template\" style=\"font-size:10px !important; margin-left: 40px; color:#808080;\"><span class=\"date\"></span> <span class=\"title\" style=\"padding-left: 150px;\"></span></div>",
+            
+            // TODO: check custom fonts in header/footer
+            HeaderTemplate = "<div id=\"footer-template\" style=\"font-size:10px !important; font-family: 'Abel'; margin-left: 40px; color:#808080;\"><span class=\"date\"></span> <span class=\"title\" style=\"padding-left: 150px;\"></span></div>",
             FooterTemplate = "<div style=\"width:100%; margin: 0 auto; padding-right: 40px;\"><p style=\"text-align: right; font-size: 10px;\"><span class=\"pageNumber\"></span>/<span class=\"totalPages\"></span></p></div>"
         };
 
