@@ -1,6 +1,8 @@
 using iText.Html2pdf;
 using iText.Kernel.Events;
+using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
+using iText.Layout;
 using PdfGenerator.Prototypes.ItextGenerator.EventHandlers;
 
 namespace PdfGenerator.Prototypes.ItextGenerator;
@@ -15,15 +17,18 @@ public static class PdfGenerator
         using var pdfWriter = new PdfWriter(resultPdf);
         var pdfDocument = new PdfDocument(pdfWriter);
 
+        var document = new Document(pdfDocument, new PageSize(595, 1000), false);
+
+        document.SetMargins(0, 0, 0, 0);
+        document.GetPageEffectiveArea(new PageSize(595, 1000));
+
         pdfWriter.SetCloseStream(false);
-        
+
         var footerHandler = new FooterEventHandler();
         var headerHandler = new HeaderEventHandler();
-        var backgroundHandler = new BackgroundHandler();
 
         pdfDocument.AddEventHandler(PdfDocumentEvent.END_PAGE, footerHandler);
         pdfDocument.AddEventHandler(PdfDocumentEvent.START_PAGE, headerHandler);
-        pdfDocument.AddEventHandler(PdfDocumentEvent.START_PAGE, backgroundHandler);
 
         var converterProperties = new ConverterProperties();
 

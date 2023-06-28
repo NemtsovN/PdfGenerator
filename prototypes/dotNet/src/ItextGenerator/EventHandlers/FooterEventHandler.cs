@@ -5,6 +5,7 @@ using iText.Kernel.Pdf.Xobject;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using iText.StyledXmlParser.Resolver.Font;
 using IEventHandler = iText.Kernel.Events.IEventHandler;
 
 namespace PdfGenerator.Prototypes.ItextGenerator.EventHandlers;
@@ -34,7 +35,11 @@ public class FooterEventHandler : IEventHandler
         // Creates drawing canvas
         var pdfCanvas = new PdfCanvas(page);
         var canvas = new Canvas(pdfCanvas, pageSize);
-        canvas.SetFontSize(9);
+        canvas.SetFontSize(8);
+
+        var fontProvider = new BasicFontProvider();
+        canvas.SetFontProvider(fontProvider);
+        canvas.SetFontFamily("times");
 
         var p = new Paragraph()
             .Add(pageNumber.ToString())

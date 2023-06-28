@@ -13,20 +13,19 @@ public static class PdfGenerator
         var browserLaunchOptions = new LaunchOptions
         {
             Headless = true,
-            Args = new[] { "--no-sandbox" }
+            Args = new[] { "--no-sandbox" },
         };
 
         await using var browser = await Puppeteer.LaunchAsync(browserLaunchOptions);
         await using var page = await browser.NewPageAsync();
 
-        // Set a4 page size
+        // await page.EmulateMediaTypeAsync(MediaType.Print);
+
         await page.SetViewportAsync(new ViewPortOptions
         {
-            Width = 2480,
-            Height = 3508
+            Width = 793,
+            Height = 1122
         });
-        
-        await page.EmulateMediaTypeAsync(MediaType.Print);
         
         // Inject HTML
         await page.SetContentAsync(htmlInput);
@@ -40,21 +39,21 @@ public static class PdfGenerator
             DisplayHeaderFooter = true,
             
             // Defines if we want to print a background color of a page. For example: if background is grey, it will create a box inside page with grey color.
-            // PrintBackground = true,
+            PrintBackground = true,
             MarginOptions = new()
             {
-                Bottom = "1.5cm",
-                Left = "1.5cm",
-                Right = "1.5cm",
-                Top = "1.5cm"
+                Bottom = "0.95cm",
+                Left = "1.03cm",
+                Right = "1cm",
+                Top = "1.03cm"
             },
-            // Width = "2480px",
-            // Height = "3508px",
-            Scale = new decimal(0.99),
+            PreferCSSPageSize = true,
+            // Width = "21cm",
+            // Height = "29.71cm",
+            Scale = new decimal(1),
             
-            // TODO: check custom fonts in header/footer
-            HeaderTemplate = "<div id=\"footer-template\" style=\"font-size:10px !important; font-family: 'Abel'; margin-left: 40px; color:#808080;\"><span class=\"date\"></span> <span class=\"title\" style=\"padding-left: 150px;\"></span></div>",
-            FooterTemplate = "<div style=\"width:100%; margin: 0 auto; padding-right: 40px;\"><p style=\"text-align: right; font-size: 10px;\"><span class=\"pageNumber\"></span>/<span class=\"totalPages\"></span></p></div>"
+            HeaderTemplate = "<div id=\"footer-template\" style=\"font-size:8px !important; margin-left: 25px;\"><span class=\"date\"></span> <span class=\"title\" style=\"padding-left: 220px;\"></span></div>",
+            FooterTemplate = "<style>#footer { padding: 0 !important; }</style><div style=\"width:100%; margin: 0 auto; padding-bottom: 7px; padding-right: 27px;\"><p style=\"text-align: right; font-size: 8px;\"><span class=\"pageNumber\"></span>/<span class=\"totalPages\"></span></p></div>"
         };
 
         var resultPdf = await page.PdfStreamAsync(pdfOptions);
