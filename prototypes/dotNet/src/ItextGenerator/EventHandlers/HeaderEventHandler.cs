@@ -28,15 +28,15 @@ public class HeaderEventHandler : IEventHandler
             .Add(DateTime.Now.ToString("dd/MM/yyyy, hh:mm tt", CultureInfo.InvariantCulture));
         
         canvas.ShowTextAligned(generationDateText,
-            28,
-            pageSize.GetTop() - 30, TextAlignment.LEFT);
+            27,
+            pageSize.GetTop() - 24, TextAlignment.LEFT);
         
         var nameDateText = new Paragraph()
             .Add("Best Series in the World");
         
         canvas.ShowTextAligned(nameDateText,
-            pageSize.GetWidth() / 2,
-            pageSize.GetTop() - 30, TextAlignment.LEFT);
+            pageSize.GetWidth() / 2 + 6,
+            pageSize.GetTop() - 24, TextAlignment.LEFT);
         canvas.Close();
     }
 }

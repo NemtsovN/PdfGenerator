@@ -8,12 +8,15 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
+    page-break-inside: auto;
 }
 
 th, td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
+    page-break-inside: avoid;
+    page-break-after: auto;
 }
 
 img {
@@ -52,6 +55,8 @@ footer {
 
 button {
     display: block;
+    width: 115px;
+    height: 40px;
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 18px;

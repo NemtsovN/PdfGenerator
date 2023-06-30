@@ -59,11 +59,11 @@ static async Task WkhtmltopdfGeneratePdfAsync(string htmlInput)
 {
     Console.WriteLine("Start Wkhtmltopdf generator.");
 
-    var generatedPdfContent = PdfGenerator
+    var generatedPdfContent = await PdfGenerator
         .Prototypes
-        .ItextGenerator
+        .WkhtmltopdfGenerator
         .PdfGenerator
-        .GeneratePdf(htmlInput);
+        .GeneratePdfAsync(htmlInput);
 
     Console.WriteLine("Finished PDF generation with Wkhtmltopdf.");
 

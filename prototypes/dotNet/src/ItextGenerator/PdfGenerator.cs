@@ -17,11 +17,7 @@ public static class PdfGenerator
         using var pdfWriter = new PdfWriter(resultPdf);
         var pdfDocument = new PdfDocument(pdfWriter);
 
-        var document = new Document(pdfDocument, new PageSize(595, 1000), false);
-
-        document.SetMargins(0, 0, 0, 0);
-        document.GetPageEffectiveArea(new PageSize(595, 1000));
-
+        var _ = new Document(pdfDocument, new PageSize(595, 900), false);
         pdfWriter.SetCloseStream(false);
 
         var footerHandler = new FooterEventHandler();
